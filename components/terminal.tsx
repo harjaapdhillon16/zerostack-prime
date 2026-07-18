@@ -23,7 +23,7 @@ const R = "text-red";          // review fixes
 const TABS: Tab[] = [
   {
     name: "scope.lock.md",
-    stamp: "SCOPE LOCKED · DAY 03",
+    stamp: "DISCOVERY COMPLETE · QUOTE FIXED",
     lines: [
       [[C, "# bazaar-app · scope lock"]],
       [[C, "owner: you · builder: zerostack"]],
@@ -36,7 +36,7 @@ const TABS: Tab[] = [
       [[G, "[x] "], [P, "notifications — push + SMS on order events"]],
       [[P, ""]],
       [[P, "screens: "], [S, "24"], [P, " · tables: "], [S, "11"], [P, " · endpoints: "], [S, "38"]],
-      [[P, "delivery: "], [S, "day 30"], [P, " · price: "], [S, "₹50,000"], [P, " — fixed"]],
+      [[P, "delivery: "], [S, "day 30"], [P, " · quote: "], [S, "fixed at discovery"]],
     ],
   },
   {

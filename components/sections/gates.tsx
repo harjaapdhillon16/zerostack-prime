@@ -8,7 +8,7 @@ export function QualityGates() {
       <div className="shell">
         <Reveal>
           <SectionHeading
-            day="Day 21–26"
+            day="Day 17–20"
             label="Quality gates"
             title={
               <>

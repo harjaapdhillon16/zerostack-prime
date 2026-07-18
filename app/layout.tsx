@@ -28,8 +28,8 @@ const plexMono = IBM_Plex_Mono({
   display: "swap",
 });
 
-const title = `${BRAND.name} — a real product in ${OFFER.days} days. ${OFFER.priceINR}. Flat.`;
-const description = `${BRAND.lockup}: a production mobile app, admin panel, Node.js API, and PostgreSQL database — scoped, built, quality-checked, and in the stores in ${OFFER.days} days for a flat ${OFFER.priceINR}. You own every line.`;
+const title = `${BRAND.name} — your product, built and live in ${OFFER.days} days. From ${OFFER.priceFrom}.`;
+const description = `${BRAND.lockup}: a production mobile app, admin panel, Node.js API, and PostgreSQL database — built by day ${OFFER.buildDays}, carried through App Store and Play Store release by day ${OFFER.days}. Fixed quote of ${OFFER.priceINR}, agreed at discovery. You own every line.`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${BRAND.domain}`),

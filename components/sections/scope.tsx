@@ -9,8 +9,8 @@ export function Scope() {
         <div>
           <Reveal>
             <SectionHeading
-              day="Day 01–03"
-              label="Scope lock"
+              day="Discovery · 3–4 days"
+              label="Consulting & scope"
               title={
                 <>
                   It starts with a document,
@@ -18,16 +18,16 @@ export function Scope() {
                   not a demo.
                 </>
               }
-              lead="Before a line of code exists, every screen, table, and endpoint is written down and priced into the fixed fee. You sign it; we build exactly it. That document is why the price holds and the date holds."
+              lead="Three to four days of discovery before the clock starts: we dig into the business, consult on the right build, and write every screen, table, and endpoint into a scope you sign. That document fixes your quote — and your date."
             />
           </Reveal>
 
           <Reveal delay={120}>
             <ul className="mt-10 space-y-4">
               {[
-                ["Screens, schema, and API surface — enumerated, not implied", "01"],
-                ["A fixed delivery date you can put in a calendar", "02"],
-                ["Change requests go to a follow-on sprint, never into your date", "03"],
+                ["Business deep-dive and solution consulting, before any payment", "01"],
+                ["Screens, schema, and API surface — enumerated, not implied", "02"],
+                ["A fixed quote (₹50,000–₹1,00,000) and a date you can put in a calendar", "03"],
               ].map(([text, n]) => (
                 <li key={n} className="flex gap-4">
                   <span className="daytag mt-0.5 shrink-0">{n}</span>

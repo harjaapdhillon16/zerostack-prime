@@ -30,7 +30,7 @@ export function Pipeline() {
       <div className="shell">
         <Reveal>
           <SectionHeading
-            day="Day 04–20"
+            day="Day 07–16"
             label="The line"
             align="center"
             title={
@@ -40,7 +40,7 @@ export function Pipeline() {
                 Engineering judgement.
               </>
             }
-            lead="This is the machine that makes ₹50,000 in 30 days possible — and the reason it doesn't produce ₹50,000-in-30-days quality."
+            lead="This is the machine that makes a 20-day build possible — and the reason it doesn't produce 20-day quality."
           />
         </Reveal>
       </div>

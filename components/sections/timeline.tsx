@@ -20,10 +20,10 @@ export function Timeline() {
       <div className="shell" ref={ref}>
         <Reveal>
           <SectionHeading
-            day="Day 01–30"
+            day="Discovery + 30 days"
             label="The schedule"
-            title="Thirty days, accounted for."
-            lead="No week is vague. Every phase has a number on it, an output list, and a reason it exists. Scroll — the playhead follows."
+            title="Every day, accounted for."
+            lead="A 3–4 day discovery fixes the scope and the quote. Then the clock starts: the product is finished by day 20, and days 21–30 carry it through App Store and Play Store review to launch."
           />
         </Reveal>
 

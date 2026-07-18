@@ -18,12 +18,12 @@ export function Receipt() {
               label="The receipt"
               title={
                 <>
-                  One number.
+                  One quote.
                   <br />
-                  Printed in advance.
+                  Fixed at discovery.
                 </>
               }
-              lead="The fee is fixed before we start and it is fixed when we finish. If we misjudge the effort, that is our invoice to absorb — not yours."
+              lead="Your quote lands between ₹50,000 and ₹1,00,000 depending on scope — fixed in writing at the end of discovery, before any payment. If we misjudge the effort, that is our invoice to absorb — not yours."
             />
           </Reveal>
 
@@ -87,7 +87,7 @@ export function Receipt() {
               </div>
               <div className="mt-3 flex items-baseline justify-between">
                 <span className="text-[0.6875rem] uppercase tracking-[0.18em] text-fg">Total · {OFFER.days} days</span>
-                <span className="numerals amber-glow text-4xl text-amber">{OFFER.priceINR}</span>
+                <span className="numerals whitespace-nowrap text-2xl text-amber md:text-3xl">{OFFER.priceINR}</span>
               </div>
               <p className="mt-2 text-right text-[0.625rem] uppercase tracking-wider text-fg-faint">
                 + GST · {OFFER.priceUSDApprox}

@@ -116,7 +116,7 @@ export function SiteHeader() {
           >
             <ButtonLink href={whatsappLink()} size="lg" className="w-full">
               <WhatsAppIcon />
-              Book a slot — {OFFER.priceINR}
+              Book a discovery call — from {OFFER.priceFrom}
             </ButtonLink>
           </div>
         </nav>

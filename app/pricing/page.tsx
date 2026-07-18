@@ -15,7 +15,7 @@ import { Reveal } from "@/components/reveal";
 
 export const metadata: Metadata = {
   title: "Pricing",
-  description: `One flat ${OFFER.priceINR} for the app, admin panel, API, and database — itemized line by line, with what is not included stated just as plainly.`,
+  description: `A fixed quote of ${OFFER.priceINR} for the app, admin panel, API, and database — agreed at discovery, itemized line by line, with what is not included stated just as plainly.`,
 };
 
 const LAST_COL = COMPARE.columns.length - 1;
@@ -32,7 +32,7 @@ export default function PricingPage() {
           </Reveal>
           <Reveal delay={80}>
             <h1 className="text-display mt-7 max-w-4xl">
-              One number.
+              One quote.
               <br />
               <span className="text-fg-muted">It does not move.</span>
             </h1>
@@ -40,8 +40,9 @@ export default function PricingPage() {
           <Reveal delay={160}>
             <p className="text-lead mt-8 max-w-2xl text-fg-muted">
               {OFFER.priceINR} ({OFFER.priceUSDApprox}) for the app, the admin panel, the API,
-              the database, and the keys to all of it. Fixed before we start, identical when we
-              finish. If we misjudge the effort, the difference is ours.
+              the database, and the keys to all of it. Your exact figure depends on scope and is
+              fixed in writing at the end of the 3–4 day discovery — before any payment, and it
+              never moves after. If we misjudge the effort, the difference is ours.
             </p>
           </Reveal>
         </div>
@@ -50,7 +51,7 @@ export default function PricingPage() {
       <Section tight>
         <div className="shell">
           <Reveal y={32}>
-            <div className="mono-panel mx-auto w-full max-w-2xl rounded-xl px-7 py-8 text-[0.875rem] shadow-[0_32px_90px_-28px_rgba(0,0,0,0.85)] md:px-10 md:py-10">
+            <div className="mono-panel mx-auto w-full max-w-2xl rounded-xl px-7 py-8 text-[0.875rem] md:px-10 md:py-10">
               <div className="text-center">
                 <p className="text-base font-medium uppercase tracking-[0.3em] text-fg">
                   {BRAND.name}

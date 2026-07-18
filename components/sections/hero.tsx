@@ -2,21 +2,18 @@
 
 import { useEffect, useRef } from "react";
 import { BRAND, OFFER, whatsappLink, WORK } from "@/lib/site";
-import { heroScroll } from "@/lib/hero-scroll";
-import { SceneCanvas } from "@/components/three/scene-canvas";
-import { HeroScene } from "@/components/three/hero-scene";
 import { ButtonLink, WhatsAppIcon, ArrowIcon } from "@/components/ui/button";
 
 /**
- * The enterprise hero. The glass field is a full-bleed backdrop across the
- * whole frame — texture, not an object — and the composition anchors
- * lower-left: eyebrow, statement headline, then a copy/CTA row and a slim
- * stats-and-wordmarks band, in the register of the reference sites.
+ * The enterprise hero: a clean pastel gradient field (no objects, no noise),
+ * statement headline anchored lower-left, copy/CTA row, and a slim band of
+ * stats and portfolio wordmarks. Entrance is a staggered rise; scrolling away
+ * applies a gentle counter-parallax to the content.
  */
 
 const STATS = [
-  { value: `${OFFER.days} days`, label: "fixed delivery date" },
-  { value: `${OFFER.priceINR} flat`, label: "agreed in writing first" },
+  { value: `${OFFER.days} days`, label: "incl. store release management" },
+  { value: OFFER.priceINR, label: "quote fixed at discovery" },
   { value: "100% yours", label: "code ownership from day one" },
 ] as const;
 
@@ -30,7 +27,6 @@ export function Hero() {
       if (!el) return;
       const h = el.offsetHeight - window.innerHeight * 0.2;
       const p = h > 0 ? Math.min(1, Math.max(0, window.scrollY / h)) : 0;
-      heroScroll.p = p;
 
       if (contentRef.current) {
         contentRef.current.style.transform = `translateY(${p * -38}px)`;
@@ -53,23 +49,25 @@ export function Hero() {
       id="hero-light"
       className="relative flex min-h-[100svh] flex-col overflow-hidden bg-ink text-fg"
     >
-      {/* Full-bleed glass backdrop */}
-      <SceneCanvas
+      {/* Straight gradient field: warm amber upper-left drifting through paper
+          into cool teal lower-right. Calm, clean, nothing floating. */}
+      <div
         className="absolute inset-0"
-        camera={{ position: [0, 0, 9], fov: 38 }}
-        fallback={
-          <div className="absolute inset-0">
-            <div className="absolute inset-0 bg-[linear-gradient(118deg,#fff3dd_0%,#f7f8fa_38%,#e5eff8_66%,#ddfaf1_100%)]" />
-            <div className="absolute left-[6%] top-[8%] h-64 w-48 rotate-[22deg] rounded-lg border border-white/70 bg-white/40" />
-            <div className="absolute right-[10%] top-[14%] h-72 w-52 rotate-[22deg] rounded-lg border border-white/70 bg-white/35" />
-          </div>
-        }
-      >
-        <HeroScene />
-      </SceneCanvas>
-
-      {/* Legibility wash — bottom-weighted, where the type lives */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[62%] bg-gradient-to-t from-ink via-ink/70 to-transparent" />
+        aria-hidden="true"
+        style={{
+          background:
+            "linear-gradient(118deg, #ffedd2 0%, #f9f4ea 24%, #f7f8fa 46%, #e3eef8 72%, #d3f6ec 100%)",
+        }}
+      />
+      {/* A soft radial lift so the field has depth without shapes. */}
+      <div
+        className="absolute inset-0"
+        aria-hidden="true"
+        style={{
+          background:
+            "radial-gradient(ellipse 90% 70% at 78% 18%, rgba(255,255,255,0.65) 0%, transparent 60%)",
+        }}
+      />
 
       {/* Content, anchored to the lower half */}
       <div
@@ -97,17 +95,18 @@ export function Hero() {
           >
             <p className="text-lead max-w-lg text-fg-muted">
               Mobile app, admin panel, API, and database — engineered, quality-checked, and
-              in the stores for a flat <span className="font-semibold text-fg">{OFFER.priceINR}</span>.
-              You own every line.
+              carried through App Store and Play Store release. A fixed quote of{" "}
+              <span className="font-semibold text-fg">{OFFER.priceINR}</span>, agreed at
+              discovery. You own every line.
             </p>
 
             <div className="flex shrink-0 flex-wrap items-center gap-5">
               <ButtonLink href={whatsappLink()} size="lg">
                 <WhatsAppIcon />
-                Book a build slot
+                Book a discovery call
               </ButtonLink>
               <ButtonLink href="/how-it-works" variant="quiet" size="lg" className="group">
-                The 30-day plan
+                How it works
                 <ArrowIcon />
               </ButtonLink>
             </div>

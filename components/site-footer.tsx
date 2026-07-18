@@ -93,7 +93,7 @@ export function SiteFooter() {
             © {new Date().getFullYear()} {BRAND.parent}. {CONTACT.location}.
           </p>
           <p className="text-xs font-medium text-fg-faint">
-            {OFFER.days} days · {OFFER.priceINR} flat · you own the code
+            {OFFER.days} days · from {OFFER.priceFrom}, fixed at discovery · you own the code
           </p>
         </div>
       </div>

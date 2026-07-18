@@ -14,7 +14,7 @@ const ASKS = [
   {
     title: "About two hours, early",
     body:
-      "Scoping calls on day 01–03. We arrive with the questions prepared; you arrive knowing your business. That is the entire meeting load — the rest of the month is ours.",
+      "A few hours of discovery calls across days 1–4, before the clock starts. We arrive with the questions prepared; you arrive knowing your business. That is the entire meeting load — the rest is ours.",
   },
   {
     title: "A decision-maker on WhatsApp",

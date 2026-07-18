@@ -8,6 +8,8 @@ const nextConfig: NextConfig = {
   // builds leave them unset and behave as a normal Next.js app.
   output: process.env.NEXT_OUTPUT === "export" ? "export" : undefined,
   basePath: process.env.NEXT_BASE_PATH || undefined,
+  // Folder-style URLs so GitHub Pages serves /pricing/ directly.
+  trailingSlash: true,
 };
 
 export default nextConfig;

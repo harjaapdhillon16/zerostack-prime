@@ -13,9 +13,13 @@ export const BRAND = {
 } as const;
 
 export const OFFER = {
+  /** Delivery window after discovery: product ready day 20, stores by day 30. */
   days: 30,
-  priceINR: "₹50,000",
-  priceUSDApprox: "~$600",
+  buildDays: 20,
+  /** Quote band — the exact figure is fixed in writing at the end of discovery. */
+  priceINR: "₹50,000–₹1,00,000",
+  priceFrom: "₹50,000",
+  priceUSDApprox: "~$600–1,200",
   currency: "INR",
 } as const;
 
@@ -49,17 +53,15 @@ export const NAV = [
 
 export const TIMELINE = [
   {
-    days: [1, 3],
-    phase: "Day 01–03",
-    title: "Scope lock",
-    kicker: "Decide once, build once",
+    phase: "Discovery · 3–4 days",
+    title: "Discovery & consulting",
+    kicker: "Before the clock starts",
     body:
-      "Every screen, every table, every API route is written down before a line of code exists. You approve the scope document; that document is the contract. It is the mechanism that stops a 30-day build from becoming a 90-day one.",
-    outputs: ["Screen-by-screen scope doc", "Database schema", "API surface", "A fixed delivery date"],
+      "Three to four days to understand the business — what you sell, who pays, and what the product has to prove. We consult on the right way to build it, write every screen, table, and endpoint into a scope document, and fix your quote. The 30-day clock starts only when you sign off.",
+    outputs: ["Business deep-dive", "Solution consulting", "Screen-by-screen scope doc", "Fixed quote + fixed date"],
   },
   {
-    days: [4, 9],
-    phase: "Day 04–09",
+    phase: "Day 01–06",
     title: "Foundation",
     kicker: "The unglamorous half, done properly",
     body:
@@ -67,31 +69,28 @@ export const TIMELINE = [
     outputs: ["PostgreSQL + migrations", "Auth & roles", "Staging environment", "CI pipeline"],
   },
   {
-    days: [10, 20],
-    phase: "Day 10–20",
-    title: "The line",
+    phase: "Day 07–16",
+    title: "The build",
     kicker: "AI writes volume. Engineers own it.",
     body:
       "App, API, and admin panel are built in parallel. AI generates the repetitive mass — CRUD, forms, types, tests, migrations — and an engineer reviews every line before it merges. The speed comes from removing typing, not judgement.",
     outputs: ["React Native app", "Node.js API", "Admin panel", "Automated tests"],
   },
   {
-    days: [21, 26],
-    phase: "Day 21–26",
-    title: "Hardening",
-    kicker: "Where most 30-day builds quietly fail",
+    phase: "Day 17–20",
+    title: "Hardening & QA",
+    kicker: "Product ready by day 20",
     body:
-      "Load tests, error states, offline behaviour, permission edge cases, and a manual QA pass on real devices. We assume the demo works; this week is spent on everything that happens when it doesn't.",
-    outputs: ["QA on real devices", "Load & error testing", "Security review", "Bug burn-down"],
+      "Load tests, error states, offline behaviour, permission edge cases, and a manual QA pass on real devices. By day 20 the product is finished — built, tested, and demo-ready.",
+    outputs: ["QA on real devices", "Load & error testing", "Security review", "Day-20 finished build"],
   },
   {
-    days: [27, 30],
-    phase: "Day 27–30",
-    title: "Handover",
-    kicker: "You own all of it",
+    phase: "Day 21–30",
+    title: "Release management",
+    kicker: "The stores take their time — we manage it",
     body:
-      "Store submission, production deployment, and a recorded walkthrough. You receive the repository with full history, the infrastructure credentials, and the documentation. No lock-in, no retainer required.",
-    outputs: ["Store submission", "Production deploy", "Full source code", "Recorded walkthrough"],
+      "Submission to the App Store and Play Store, review-cycle management, fixes for store feedback, production deployment, and handover. Apple and Google reviews are the one step nobody can rush — we budget for them honestly instead of pretending they don't exist.",
+    outputs: ["App Store + Play Store submission", "Review-cycle management", "Production deploy", "Keys, code, walkthrough"],
   },
 ] as const;
 
@@ -229,7 +228,7 @@ export const NOT_INCLUDED = [
 export const COMPARE = {
   columns: ["Typical agency", "Freelancer", "No-code platform", "ZeroStack"],
   rows: [
-    { label: "Price", values: ["₹4–8 lakh", "₹1–2 lakh", "₹60k+/year, forever", "₹50,000 flat"] },
+    { label: "Price", values: ["₹4–8 lakh", "₹1–2 lakh", "₹60k+/year, forever", "₹50k–₹1L, fixed at discovery"] },
     { label: "Time to launch", values: ["3–6 months", "2–4 months", "Weeks", "30 days, fixed"] },
     { label: "Code review", values: ["Sometimes", "Rarely", "No code to review", "Every line"] },
     { label: "Admin panel", values: ["Quoted extra", "Usually skipped", "Limited", "Included"] },
@@ -247,9 +246,19 @@ export const PAYMENT_TERMS =
 
 export const FAQ = [
   {
-    q: `How is ${OFFER.priceINR} possible when agencies quote ten times that?`,
+    q: `How is ${OFFER.priceINR} possible when agencies quote in multiples of that?`,
     a:
       "Two reasons, neither of which is cut corners. First, scope is fixed before we start — that removes the open-ended discovery and change-request cycles that make up most of a traditional invoice. Second, AI now writes the repetitive volume of an application — CRUD, forms, types, migrations, test scaffolding — in a fraction of the old time. Our engineers spend their hours on architecture, edge cases, and review, which is where the value always was.",
+  },
+  {
+    q: "Why is the price a range?",
+    a:
+      "Because scope varies. A directory app with four screens is not a two-sided marketplace with payments. During the 3–4 day discovery we map exactly what you need, and your quote lands between ₹50,000 and ₹1,00,000 — fixed in writing before any payment, and it never moves after that. If we misjudge the effort, the difference is ours to absorb.",
+  },
+  {
+    q: "When is the product actually ready?",
+    a:
+      "The finished product — app, admin panel, backend — is built, tested, and demo-ready by day 20 after discovery. Days 21–30 are release management: App Store and Play Store submission, review cycles, store-feedback fixes, and production rollout. The stores' review timelines are the one step nobody can compress, so we budget for them honestly.",
   },
   {
     q: "What's the catch?",
