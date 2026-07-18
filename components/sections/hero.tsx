@@ -49,25 +49,32 @@ export function Hero() {
       id="hero-light"
       className="relative flex min-h-[100svh] flex-col overflow-hidden bg-ink text-fg"
     >
-      {/* Straight gradient field: warm amber upper-left drifting through paper
-          into cool teal lower-right. Calm, clean, nothing floating. */}
-      <div
-        className="absolute inset-0"
-        aria-hidden="true"
-        style={{
-          background:
-            "linear-gradient(118deg, #ffedd2 0%, #f9f4ea 24%, #f7f8fa 46%, #e3eef8 72%, #d3f6ec 100%)",
-        }}
-      />
-      {/* A soft radial lift so the field has depth without shapes. */}
-      <div
-        className="absolute inset-0"
-        aria-hidden="true"
-        style={{
-          background:
-            "radial-gradient(ellipse 90% 70% at 78% 18%, rgba(255,255,255,0.65) 0%, transparent 60%)",
-        }}
-      />
+      {/* Living mesh gradient: a soft base wash, five colour fields drifting
+          on long offset cycles, a white lift for depth, and film grain. */}
+      <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(118deg, #fdf3e3 0%, #f8f6f0 30%, #f7f8fa 52%, #eef2f9 74%, #e9f8f2 100%)",
+          }}
+        />
+        <div className="hero-blob hero-blob-a" style={{ left: "-24vmax", top: "-26vmax" }} />
+        <div className="hero-blob hero-blob-b" style={{ right: "-20vmax", top: "-6vmax" }} />
+        <div className="hero-blob hero-blob-c" style={{ right: "12%", top: "-32vmax" }} />
+        <div className="hero-blob hero-blob-d" style={{ left: "26%", top: "-14vmax" }} />
+        <div className="hero-blob hero-blob-e" style={{ left: "-14vmax", bottom: "-22vmax" }} />
+        {/* Depth lift + a quiet floor for the text and stats band */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(ellipse 85% 65% at 72% 22%, rgba(255,255,255,0.55) 0%, transparent 62%)",
+          }}
+        />
+        <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-ink/85 via-ink/30 to-transparent" />
+        <div className="hero-grain absolute inset-0" />
+      </div>
 
       {/* Content, anchored to the lower half */}
       <div
