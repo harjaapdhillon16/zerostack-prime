@@ -6,7 +6,7 @@ import { Reveal } from "@/components/reveal";
 
 export const metadata: Metadata = {
   title: "How it works",
-  description: `The ${OFFER.days}-day programme in five phases: scope lock, foundation, build, hardening, handover. Every phase has a fixed window, an output list, and a reason it exists.`,
+  description: `A 3–4 day discovery fixes the scope and your quote, then the ${OFFER.days}-day clock starts: foundation, build, and QA finish the product by day ${OFFER.buildDays}; days 21–${OFFER.days} carry it through App Store and Play Store release.`,
 };
 
 /** The three things the schedule needs from the client's side. */

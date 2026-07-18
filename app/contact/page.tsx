@@ -6,7 +6,7 @@ import { Reveal } from "@/components/reveal";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: `Reach ${BRAND.lockup} on WhatsApp, phone, or email. A 20-minute call, a written scope within 48 hours, and nothing due before you approve it.`,
+  description: `Reach ${BRAND.lockup} on WhatsApp, phone, or email. A discovery call, then a written scope and fixed quote — and nothing due before you approve them.`,
 };
 
 type Channel = {

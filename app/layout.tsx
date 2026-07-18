@@ -43,9 +43,12 @@ export const metadata: Metadata = {
     "MVP development India",
     "30 day app development",
     "fixed price app development",
+    "app development cost India",
     "React Native development India",
     "startup MVP agency",
     "build an app in 30 days",
+    "product discovery sprint",
+    "app store release management",
   ],
   authors: [{ name: BRAND.parent, url: BRAND.parentUrl }],
   openGraph: {
